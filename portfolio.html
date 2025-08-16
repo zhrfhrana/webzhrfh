@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">✨ My Portfolio</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="company.html">Company</a>
+      </nav>
+    </header>
+
+    <section class="gallery">
+      <h2>My Works</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="yh.jpg" alt="Project 1" onclick="openModal(this.src)" />
+          <p>Project 1 - Desain Canva</p>
+        </div>
+        <div class="card">
+          <img src="html.jpg" alt="Project 2" onclick="openModal(this.src)" />
+          <p>Project 2 - Website HTML</p>
+        </div>
+        <div class="card">
+          <img src="yuh.jpg" alt="Project 3" onclick="openModal(this.src)" />
+          <p>Project 3 - Fotografi</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal untuk zoom -->
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+
+    <footer>
+      <p>© 2025 zhrfh_rana | All Rights Reserved</p>
+    </footer>
+
+    <script>
+      function openModal(src) {
+        document.getElementById("imageModal").style.display = "block";
+        document.getElementById("modalImage").src = src;
+      }
+
+      function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
